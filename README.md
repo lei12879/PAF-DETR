@@ -14,13 +14,8 @@ All datasets can be downloaded from the following links.
 [TinyPerson](https://universe.roboflow.com/chris-d-dbyby/tinyperson)
 
 ### Training 
-#### Training  on the VisDrone dataset
 ```
-python tools/train.py -c configs\rtdetrv2\pafdetr_r18vd_visdrone.yml
-```
-####  Training  on the TinyPerson dataset
-```
-python tools/train.py -c configs\rtdetrv2\pafdetr_r18vd_tinyperson.yml
+python tools/train.py -c path/to/config
 ```
 
 ##  Testing
