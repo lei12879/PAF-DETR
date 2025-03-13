@@ -3,13 +3,13 @@
 **Official implementation** of  *"PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration"* .
 
 ## 🚀 Highlights
-- ✅ Partial Attention Fusion  enhances semantics for small object recognition.
+✅ Partial Attention Fusion  enhances semantics for small object recognition.
 
-- ✅ Auxiliary branch mitigates information loss in cross-scale feature fusion.
+✅ Auxiliary branch mitigates information loss in cross-scale feature fusion.
 
-- ✅ Dynamic Upsampling with adaptive feature alignment.
+✅ Dynamic Upsampling with adaptive feature alignment.
 
-- ✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
+✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
 
 
 
