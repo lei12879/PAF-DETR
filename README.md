@@ -3,10 +3,10 @@
 **Official implementation** of  *"PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration"* .
 
 ## 🚀 Highlights
-✅ Partial Attention Fusion  enhances semantics for small object recognition.
-✅ Auxiliary branch mitigates information loss in cross-scale feature fusion.
-✅ Dynamic Upsampling with adaptive feature alignment.
-✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
+-✅ Partial Attention Fusion  enhances semantics for small object recognition.
+-✅ Auxiliary branch mitigates information loss in cross-scale feature fusion.
+-✅ Dynamic Upsampling with adaptive feature alignment.
+-✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
 
 
 
@@ -57,7 +57,7 @@ path/to/tinyperson/
 You can modify config [`img_folder`](https://github.com/lei12879/PAF-DETR/blob/main/configs/dataset/tinyperson_detection.yml)[`ann_file`](https://github.com/lei12879/PAF-DETR/blob/main/configs/dataset/tinyperson_detection.yml)
 
 
-## 🏋️ Training & Testing
+## 🏋️ Training and Testing
 
 ### Single-GPU Training
 ```bash
