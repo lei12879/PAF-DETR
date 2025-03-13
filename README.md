@@ -2,6 +2,8 @@
 
 **Official implementation** of  *"PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration"* .
 
+
+
 ## 🚀 Highlights
 ✅ Partial Attention Fusion  enhances semantics for small object recognition.
 
@@ -13,14 +15,16 @@
 
 
 
-
 ##  ⚙️Installation
 We use  `python=3.10,pytorch=2.0.1,cuda=11.7`. Other versions may also be available. Clone the repository locally and install with
 ```
 git clone https://github.com/lei12879/PAF-DETR.git
 cd PAF-DETR
 ```
+
+
 ## ⚙️Example conda environment setup
+
 
 ### 1. Create environment
 ```
@@ -36,6 +40,7 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 ```
 pip install -r requirements.txt
 ```
+
 
 ##  📂Dataset Preparation
 
