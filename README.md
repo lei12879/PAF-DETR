@@ -11,7 +11,7 @@
 
 ✅ Dynamic Upsampling with adaptive feature alignment.
 
-✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
+✅ State-of-the-art performance on VisDrone (52.0% mAP50 with ResNet50) and TinyPerson (19.0% mAP50 with ResNet18).
 
 
 
