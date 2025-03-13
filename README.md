@@ -1,18 +1,23 @@
 # PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration
-Official code of 'PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration'
-## Abstract
-With its superior maneuverability and flexibility, the Unmanned Aerial Vehicle(UAV) is able to effortlessly tackle various complex scenarios and challenges. However, due to their small size, limited information, and severe occlusion, the subtle features and semantic information of small objects in UAV images are prone to being lost. This paper proposes Partial Attention Fusion-based Detection Transformer(PAF-DETR)  tailored specifically for enhancing small object detection in UAV images, which employs Partial Attention Fusion module to capture potential small object regions, enhances feature connections through the integration of Feature Alignment Module and CSP-Rep fusion module, and incorporates Dynamic Upsampling module. First, the extracted features from the backbone are input into Attention-Driven Context-Aware Encoder and Auxiliary Branch. Second, within the encoder, attention-based internal scale interaction mechanism is specifically applied to the highest-level feature. Then, a bidirectional fusion strategy is adopted to fuse high-level semantic details with low-level features, while dynamically refining sampling points through Dynamic Upsampling module. Additionally, it propagates the detailed information from low-level feature to high-level feature. Third, Feature Alignment Module in the Auxiliary Branch employs Dynamic Upsampling module to align the features obtained from the backbone's last three stages, and CSP-Rep fusion module injects them into the corresponding features processed by the encoder. Finally, the decoder and head generate precise category probabilities and bounding box coordinates as the final detection predictions. The PAF-DETR-50 excels on the VisDrone dataset, achieving a mAP50-95 of 31.3\% and a mAP50 of 52\%, showcasing its potency in small object detection.
-##  Installation
-We use  `python=3.10,pytorch=2.0.1,cuda=11.7`. Other versions may also be available.
 
-Please follow the instructions to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is needed.
+**Official implementation** of  *"PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration"* .
 
-Clone the repository locally and install with
+## 🚀 Highlights
+✅ Partial Attention Fusion  enhances semantics for small object recognition.
+✅ Auxiliary branch mitigates information loss in cross-scale feature fusion.
+✅ Dynamic Upsampling with adaptive feature alignment.
+✅ State-of-the-art performance on VisDrone (52.0% mAP50) and TinyPerson (19.0% mAP50).
+
+
+
+
+##  ⚙️Installation
+We use  `python=3.10,pytorch=2.0.1,cuda=11.7`. Other versions may also be available. Clone the repository locally and install with
 ```
 git clone https://github.com/lei12879/PAF-DETR.git
 cd PAF-DETR
 ```
-## Example conda environment setup
+## ⚙️Example conda environment setup
 
 ### 1. Create environment
 ```
@@ -28,8 +33,8 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 ```
 pip install -r requirements.txt
 ```
-##  Usage
-### Data Download
+
+##  📂Dataset Preparation
 
 
 -   Download and extract [VisDrone2019](https://github.com/VisDrone/VisDrone-Dataset.git)  train and val images. 
@@ -52,27 +57,33 @@ path/to/tinyperson/
 You can modify config [`img_folder`](https://github.com/lei12879/PAF-DETR/blob/main/configs/dataset/tinyperson_detection.yml)[`ann_file`](https://github.com/lei12879/PAF-DETR/blob/main/configs/dataset/tinyperson_detection.yml)
 
 
+## 🏋️ Training & Testing
 
-### Training 
-To train PAF-DETR on ViaDrone2019 dataset run:
-```
+### Single-GPU Training
+```bash
+# VisDrone 
 python tools/train.py -c configs/pafdetr/pafdetr_r18vd_visdrone.yml
-```
-To train PAF-DETR on TinyPerson dataset run:
-```
+
+# TinyPerson 
 python tools/train.py -c configs/pafdetr/pafdetr_r18vd_tinyperson
 ```
 
+### Multi-GPU Distributed Training
 
-###  Testing
+```bash
+# 4 GPUs example
+python -m torch.distributed.launch --nproc_per_node=4 \
+    tools/train.py -c configs/pafdetr/pafdetr_r18vd_visdrone.yml 
 ```
+### Testing
+```bash
 python tools/train.py -c path/to/config -r path/to/checkpoint --test-only
 ```
 
-## Citation
+## 📜Citation
 If you use `PAF-DETR`  in your work, please use the following BibTeX entries:
 ```
-@article{lei2024pafdetr,
+@article{leipafdetr,
   title     = {PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration},
   author    = {Lei, Huan and Ren, Lingfei and Wu, Ze and Yang, Wenyuan},
   journal   = {The Visual Computer},
