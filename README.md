@@ -88,13 +88,4 @@ python -m torch.distributed.launch --nproc_per_node=4 \
 python tools/train.py -c path/to/config -r path/to/checkpoint --test-only
 ```
 
-## 📜Citation
-If you use `PAF-DETR`  in your work, please use the following BibTeX entries:
-```
-@article{leipafdetr,
-  title     = {PAF-DETR: Enhancing UAV Image Detection with Partial Attention and Dynamic Feature Integration},
-  author    = {Lei, Huan and Ren, Lingfei and Wu, Ze and Yang, Wenyuan},
-  journal   = {The Visual Computer},
-  note      = {Submitted for Review}
-}
-```
+
